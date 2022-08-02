@@ -1,0 +1,470 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Operating system</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .container{
+          max-width: 1490px;
+          padding-top: 10px;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+      
+        }
+
+        html {
+        height: -webkit-fill-available;
+        }
+
+        main {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+        height: -webkit-fill-available;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background-color: #ebebebf5;
+        }
+
+        .bi {
+        vertical-align: -.125em;
+        pointer-events: none;
+        fill: currentColor;
+        }
+
+        .dropdown-toggle { outline: 0; }
+
+        .nav-flush .nav-link {
+        border-radius: 0;
+        }
+
+        .btn-toggle {
+        display: inline-flex;
+        align-items: center;
+        padding: .25rem .5rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, .65);
+        background-color: transparent;
+        border: 0;
+        }
+        .btn-toggle:hover,
+        .btn-toggle:focus {
+        color: rgba(0, 0, 0, .85);
+        background-color: #d2f4ea;
+        }
+
+        .btn-toggle::before {
+        width: 1.25em;
+        line-height: 0;
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+        transition: transform .35s ease;
+        transform-origin: .5em 50%;
+        }
+
+        .btn-toggle[aria-expanded="true"] {
+        color: rgba(0, 0, 0, .85);
+        }
+        .btn-toggle[aria-expanded="true"]::before {
+        transform: rotate(90deg);
+        }
+
+        .btn-toggle-nav a {
+        display: inline-flex;
+        padding: .1875rem .5rem;
+        margin-top: .125rem;
+        margin-left: 1.25rem;
+        text-decoration: none;
+        }
+        .btn-toggle-nav a:hover,
+        .btn-toggle-nav a:focus {
+        background-color: #d2f4ea;
+        }
+
+        .scrollarea {
+        overflow-y: auto;
+        }
+
+        .fw-semibold { font-weight: 600; }
+        .lh-tight { line-height: 1.25; }
+        .flex-shrink-0{
+            position: fixed;
+            height: 100vh;
+        }
+        .side{
+            z-index: 999;
+            transition: all 300ms;
+        }
+        .hide{
+            display: none;
+        }
+        #overlay {
+            position: fixed; /* Sit on top of the page content */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+            }
+            .main-back {
+            background-image: url('spiral.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+
+</head>
+<body>
+    
+<main>
+
+  <div class="flex-shrink-0 p-3 bg-white side hide" style="width: 280px;">
+    <a href="#!" id="close" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-5 fw-semibold" style="margin-right: 30px;">OS Simulator</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+      </svg>
+    </a>
+    
+    <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#mvt" aria-expanded="false">
+                MVT and MFT
+            </button>
+            <div class="collapse" id="mvt">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="mvt_and_mft/MFT.html" class="link-dark rounded">MFT</a></li>
+                <li><a href="mvt_and_mft/MVT.html" class="link-dark rounded">MVT</a></li>
+            <li><a href="memory_alloc/mem_simu.html" class="link-dark rounded">Memory Allocation Simulation</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#mem-allocation" aria-expanded="false">
+                Memory Allocation
+            </button>
+            <div class="collapse" id="mem-allocation">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="memory_alloc/theory/mem_theory.html" class="link-dark rounded">Memory Allocation Theory</a></li>
+                <li><a href="memory_alloc/mft/ff/ff.html" class="link-dark rounded">MFT  Simulations</a></li>
+                <li><a href="memory_alloc/mvt/ff/ff.html" class="link-dark rounded">MVT  Simulations</a></li>
+              </ul>
+            </div>
+          </li>
+    
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#bank" aria-expanded="false">
+                Dead Locks
+            </button>
+            <div class="collapse" id="bank">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="Bankers_algo/bankers_theory.html" class="link-dark rounded">Bankers Algorithm Theory</a></li>
+                <li><a href="Bankers_algo/bankers_simulation.html" class="link-dark rounded">Bankers theory simulation</a></li>
+                 <li><a href="Counting semaphore/home.html" class="link-dark rounded">Counting Semaphores</a></li>
+                 <li><a href="dead lock/deadlock.html" class="link-dark rounded">Single instance resource</a></li>
+              </ul>
+            </div>
+        </li>   
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#process" aria-expanded="false">
+                Process Scheduling
+            </button>
+            <div class="collapse" id="process">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="process_scheduling\Theory\fcfs.html" class="link-dark rounded">FCFS</a></li>
+                <li><a href="process_scheduling\Theory\rr.html" class="link-dark rounded">RR</a></li>
+                <li><a href="process_scheduling\Theory\sjf.html" class="link-dark rounded">SJF</a></li>
+                <li><a href="process_scheduling\Theory\priority.html" class="link-dark rounded">PRIORITY</a></li>
+                <li><a href="process_scheduling/SRTF/srtf_theory.html" class="link-dark rounded">SRTF</a></li>
+                <li><a href="process_scheduling/HRRN/hrrn_theory.html" class="link-dark rounded">HRRN</a></li>
+                <li><a href="process_scheduling/LJF/ljf_theory.html" class="link-dark rounded">LJF</a></li>
+                <li><a href="process_scheduling/LRTF/lrtf_theory.html" class="link-dark rounded">LRTF</a></li>
+                <li><a href="process_scheduling/compare.html" class="link-dark rounded">Comparison</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#process-sync" aria-expanded="false">
+                Process synchronization
+            </button>
+            <div class="collapse" id="process-sync">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="process_sync/readers and writers/index.html" class="link-dark rounded">Reader-writer</a></li>
+                <li><a href="process_sync/Dining/DINING PHILOSOPHER/dininng_theory.html" class="link-dark rounded">Dininng-Philosophers</a></li>
+                   <li><a href="process_sync/producer and consumer/producer-and-consumer.html" class="link-dark rounded">Producer-consumer</a></li>
+                   <li><a href="process_sync/sleeping barber/index.html" class="link-dark rounded">Sleeping-Barber</a></li>
+    
+              </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#page" aria-expanded="false">
+                Paging
+            </button>
+            <div class="collapse" id="page">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="os_paging/paging.html" class="link-dark rounded">Paging Theory</a></li>
+                <li><a href="os_paging/paging_simulation.html" class="link-dark rounded">Paging Simulation</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#page-rep" aria-expanded="false">
+                Page Replacement
+            </button>
+            <div class="collapse" id="page-rep">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="page_replacement/index.html" class="link-dark rounded">Page Replacement Theory</a></li>
+                <li><a href="page_replacement/simulation.html" class="link-dark rounded">Page Replacement Simulation</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#disk_scheduling" aria-expanded="false">
+                Disk Scheduling
+            </button>
+            <div class="collapse" id="disk_scheduling">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="disk_scheduling/index.html" class="link-dark rounded">Disk Scheduling Theory</a></li>
+                <li><a href="disk_scheduling/simulator_FCFS.html" class="link-dark rounded">Disk Scheduling Simulation</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#file" aria-expanded="false">
+                File Allocation
+            </button>
+            <div class="collapse" id="file">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="file_allocation/FileAllocationAlgorithms/wiki.html" class="link-dark rounded">File Allocation Theory</a></li>
+                <li><a href="file_allocation/Index/index.html" class="link-dark rounded">File Allocation Simulation</a></li>
+            </ul>
+            </div>
+        </li>
+
+        <!--Add yout topic here.
+            Copy and paste the template and edit it-->
+
+        <!-- template--
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#<your_id_here>" aria-expanded="false">
+            title
+            </button>
+            <div class="collapse" id="<your_id_here>">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">title</a></li>
+                <li><a href="#" class="link-dark rounded">title</a></li>
+            </ul>
+            </div>
+        </li>
+        -->
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#pagea" aria-expanded="false">
+                System Calls
+            </button>
+            <div class="collapse" id="pagea">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="System calls/index.html" class="link-dark rounded">System Calls</a></li>
+            </ul>
+            </div>
+        </li>
+    </ul>
+  </div>
+  <div id="overlay" class="hide"></div>
+  <div class="container-fluid m-0 p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" id="hide-btn" style="padding-top: 10px;" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="width: 25px;" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></a>
+            <a class="navbar-brand" href="/" style="font-size: 28px;">OS Simulator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item visually-hidden "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item visually-hidden"><a class="nav-link" href="#!">Theory</a></li>
+                    <li class="nav-item visually-hidden"><a class="nav-link" href="#!">Simulation</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5 main-back">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-8">
+                <h1 class="font-weight-light" style="color: white; margin-bottom: 30px;">Operating System</h1>
+                <br><p style="text-align: justify;color: white;">An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.
+                    <br>
+                    Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting software for cost allocation of processor time, mass storage, printing, and other resources.
+                    For hardware functions such as input and output and memory allocation, the operating 
+                    system acts as an intermediary between programs and the computer hardware, although 
+                    the application code is usually executed directly by the hardware and frequently makes system calls to an OS function or is interrupted by it. Operating systems are found on many devices that contain a computer - from cellular phones and video game consoles to web servers and supercomputers.
+                </p>
+            </div>
+            <div class="col-lg-4"><img class="img-fluid rounded mb-4 mb-lg-0" style="width: 55%;" src="images/os_flow.png" alt="..." /></div>
+
+        </div>
+        <div class="card text-white bg-secondary my-5 py-4 text-center visually-hidden">
+            <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-4">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Memory Allocation</h2>
+                        <p class="card-text">Memory allocation is a process by which computer programs are assigned memory or 
+                            space...</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="memory_alloc/theory/mem_theory.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Bankers Algorithm </h2>
+                        <p class="card-text">Banker's Algorithm is a deadlock avoidance algorithm. It is also used for deadlock 
+                            detection. This algorithm tells that if any system can go into a deadlock or not by analyzing the 
+                            currently allocated resources and the resources required by it in the future.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="Bankers_algo/bankers_theory.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Process Scheduling</h2>
+                        <p class="card-text">The process scheduling is the activity of the process manager that handles the 
+                            removal of the running process from the CPU and the selection of another process on the basis of 
+                            a particular strategy.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="process_scheduling/SRTF/srtf_theory.html">More Info</a></div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Process synchronization</h2>
+                        <p class="card-text">Process Synchronization means coordinating the execution of processes such that no two processes access the same shared resources and data. It is required in a multi-process system where multiple processes run together, and more than one process tries to gain access to the same shared resource or data at the same time.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="process_sync/readers and writers/index.html">More Info</a></div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Paging</h2>
+                        <p class="card-text">Paging is a storage mechanism used to retrieve processes from the secondary storage into the main memory in the form of pages.
+                            The main idea behind the paging is to divide each process in the form of pages. The main memory will also be divided in the form of frames.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="os_paging/paging.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Page Replacement</h2>
+                        <p class="card-text">In a operating systems that use paging for memory management, page 
+                            replacement algorithm are needed to decide which page needed to be replaced when new page 
+                            comes in.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="page_replacement/index.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Disk Scheduling</h2>
+                        <p class="card-text">Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O scheduling.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="disk_scheduling/index.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">File Allocation</h2>
+                        <p class="card-text">So that the computer system will be convenient to use, 
+                            the operating system provides a uniform logical view of stored 
+                            information. The operating system abstracts from the physical properties
+                             of its storage devices to define a logical storage unit, the file. 
+                             Files are mapped by the operating system onto physical devices.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="file_allocation/FileAllocationAlgorithms/wiki.html">More Info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">MVT and MFT</h2>
+                        <p class="card-text">In operating systems, Memory Management is the function responsible 
+                            for allocating and managing a computer's main memory. Memory Management function keeps
+                             track of the status of each memory location, either allocated or free to ensure effective
+                              and efficient use of Primary Memory.
+                            There are two Memory Management Techniques: Contiguous, and Non-Contiguous.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="mvt_and_mft/MFT.html">More Info</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script>
+      let hide = document.querySelector('#hide-btn');
+        hide.addEventListener('click',(e)=>{
+            e.preventDefault();
+            document.querySelector('.side').classList.toggle('hide');
+            document.querySelector('#overlay').classList.toggle('hide');
+        })
+
+        let close = document.querySelector('#close');
+        close.addEventListener('click',(e)=>{
+            e.preventDefault();
+            document.querySelector('.side').classList.toggle('hide');
+            document.querySelector('#overlay').classList.toggle('hide');
+        })
+  </script>
+</main>
+  </body>
+</html>
